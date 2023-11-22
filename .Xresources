@@ -1,0 +1,56 @@
+!! Extension
+URxvt.perl-ext-common: default,font-size
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
+
+! Special
+URxvt.background: #1D1C1C
+URxvt.foreground: #FFFFFF
+URxvt.cursroColor: #FFFFFF
+
+! black
+URxvt.color0: #535353
+URxvt.color8: #393939
+
+! blue
+URxvt.color4: #0D4CCF
+URxvt.color12: #2559C6
+
+! green
+URxvt.color2: #389842
+URxvt.color10: #2AD03B
+
+! red
+URxvt.color1: #D20721
+URxvt.color9: #CE273C
+
+!! URxvt Appearance
+URxvt.font: xft:Iosevka Term:style=Regular:size=12
+URxvt.boldFont: xft:Iosevka Term:style=Bold:size=12
+URxvt.italicFont: xft:Iosevka Term:style=Italic:size=12
+URxvt.boldItalicfont: xft:Iosevka Term:style=Bold Italic:size=12
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+!!URxvt.internalBorder: 2
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso15755: false
+URxvt.iso14755_52: false
+
+URxvt.urlLauncher: chromium
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+! scale fonts
+URxvt.keysym.C-S-plus: font-size:increase
+URxvt.keysym.C-KP_Add: font-size:increase
