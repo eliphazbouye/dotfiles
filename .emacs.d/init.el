@@ -197,7 +197,7 @@
   :ensure t
   :hook (prog-mode . copilot-mode)
   :config
-  (setq copilot-node-executable "/home/eliphaz/.envm/nodejs/node-v20.9.0-linux-x64/bin/node")
+  (setq copilot-node-executable "/home/eliphaz/.envm/nodejs/node-v20.10.0-linux-x64/bin/node")
   (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
   (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion))
 
