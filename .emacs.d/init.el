@@ -41,7 +41,7 @@
 
 ;; Tabs
 (setq-default indent-tabs-mode nil
-	      tab-width 4)
+tab-width 4)
 
 ;; Bell
 (setq ring-bell-function 'ignore)
@@ -80,7 +80,7 @@
 (use-package smex
   :ensure t
   :bind (("M-x" . smex)
-	 ("M-X" . smex-major-mode-commands)))
+("M-X" . smex-major-mode-commands)))
 
 (use-package flycheck
   :ensure t
@@ -197,8 +197,21 @@
   :ensure t
   :hook (prog-mode . copilot-mode)
   :config
-  (setq copilot-node-executable "/home/eliphaz/.envm/nodejs/node-v20.10.0-linux-x64/bin/node")
+  (setq copilot-node-executable "~/.snvm/nodejs/node-v20.10.0-linux-x64/bin/node")
   (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
   (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion))
 
+(use-package whitespace-mode
+  :ensure nil
+  :hook (prog-mode . whitespace-mode))
+
+(use-package whitespace
+  :ensure nil
+  :config
+  (setq whitespace-style '(face newline tab-mark spaces space-mark trailing)
+        whitespace-display-mappings '((newline-mark 10 [182 10])
+                                      (space-mark   ?\     [?\u00B7]     [?.]))
+        )
+  (global-whitespace-mode +1)
+  (add-hook 'prog-mode-hook 'whitespace-newline-mode))
 ;;; init.el ends here
