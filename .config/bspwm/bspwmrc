@@ -2,9 +2,11 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh &
-feh --bg-scale $HOME/Pictures/backgrounds/primary.jpg
-. .fehbg
-bspc monitor -d I II III IV V VI VII VIII IX X
+feh --bg-scale $HOME/Pictures/wallpapers/primary.jpg
+nm-applet &
+#bspc monitor -d
+bspc monitor LVDS-1 -d   
+bspc monitor VGA-1 -d  
 
 bspc config border_width         2
 bspc config window_gap           0
